@@ -128,7 +128,7 @@ body {
   color: #dddddd;
 }
 
-.m-tp .bg {
+.bg {
   background-color: rgb(3, 18, 62);
 }
 
@@ -376,6 +376,14 @@ h6 {
   margin-left: auto;
   text-align: center;
 }
+
+.section--header {
+  line-height: 1.3;
+  font-weight: 500;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(126, 125, 124);
+}
 /* about */
 
 .me-dog-pic {
@@ -470,16 +478,17 @@ h6 {
 /* slider */
 .slider {
   max-width: 100rem;
-  height: 50rem;
+  height: 35rem;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .slide {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 50rem;
+  height: 35rem;
 
   display: flex;
   align-items: center;
@@ -504,15 +513,15 @@ h6 {
   font-family: inherit;
   color: 333;
   border-radius: 50%;
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 3.25rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  font-size: 2.25rem;
   cursor: pointer;
 }
 
 .slider__btn--left {
-  left: 6%;
-  transform: translate(-50%, -50%);
+  left: 8%;
+  /* transform: translate(-50%, -50%); */
 }
 
 .slider__btn--right {
@@ -539,7 +548,7 @@ h6 {
   transition: all 0.5s;
 
   /* Only necessary when overlying imag
-  /* box-shadow: 0 0.6rem 1.5rem rgba(0
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0 */
 }
 
 .dots__dot:last-child {
@@ -547,15 +556,22 @@ h6 {
 }
 
 .dots__dot--active {
-  /* background-color: #fff; */
-  background-color: #888;
+  background-color: #fff;
+  /* background-color: #888; */
   opacity: 1;
 }
 
 /* TESTIMONIALS */
 .gallery-box {
-  width: 65%;
+  width: 30%;
   position: relative;
+  padding: 5%;
+}
+
+.gallery-title {
+  max-width: 80rem;
+  margin: 0 auto 2rem auto;
+  justify-content: center;
 }
 
 .testimonial::before {
@@ -574,6 +590,7 @@ h6 {
   font-size: 2.25rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
+  color: #666;
 }
 
 .testimonial__text {
@@ -660,8 +677,8 @@ h6 {
 }
 
 .san-fran {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-evenly;
 }
