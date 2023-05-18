@@ -2,15 +2,12 @@
 
 /* Add a black background color to the top navigation */
 .container {
-  display: flex;
-  justify-content: space-between;
-  width: auto;
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 2%;
+  padding-right: 2%;
+  /* box-sizing: border-box; */
 }
-
-/* .nav-container { */
-/*    */
-/*    */
-/* } */
 
 @media (min-width: 640px) {
   .container {
@@ -42,9 +39,16 @@
   }
 }
 
+.nav.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
 #topnav {
   display: flex;
-  float: right;
+  padding: 15px;
+
+  justify-content: space-around;
 }
 
 .font-serif {
@@ -60,14 +64,16 @@
   color: #ffffff;
   text-align: center;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
-  padding: 15px;
+  padding: 0 15px;
 }
 
 #topnav a.active,
 #topnav a:hover {
-  border-bottom: 4px solid rgb(85, 232, 168) !important;
+  /* border-bottom: 4px solid rgb(85, 232, 168) !important; */
+  /* border-bottom: 4px solid rgb(255, 255, 255) !important; */
+  color: rgb(126, 125, 124);
 }
 
 #topnav a.active {
@@ -75,18 +81,19 @@
   color: rgb(126, 125, 124) !important;
 }
 
-.menu {
+.nav {
   display: flex;
   justify-content: flex-end;
   font-weight: 500;
+  width: 100%;
 }
 
 /* Change the color of links on hover  */
 #topnav a:hover {
-  color: rgb(85, 232, 168);
-  /* color: rgb(126, 125, 124); */
+  /* color: rgb(85, 232, 168); */
+  color: rgb(126, 125, 124);
   /* font-size: 150%; */
-  border-bottom: 4px solid rgb(255, 255, 255);
+  /* border-bottom: 4px solid rgb(255, 255, 255); */
 }
 
 /* Add a color to the active/current link  */
@@ -94,11 +101,13 @@
   color: rgb(0, 0, 0);
   text-align: center;
   /* font-size: 26px; */
-  border-bottom: 4px solid rgb(85, 232, 168);
+  /* border-bottom: 4px solid rgb(85, 232, 168); */
+  /* border-bottom: 4px solid rgb(255, 255, 255); */
 }
 
 #topnav a::after {
-  border-bottom: 3px solid rgb(85, 232, 168);
+  /* border-bottom: 3px solid rgb(85, 232, 168); */
+  border-bottom: 4px solid rgb(255, 255, 255);
 }
 
 .p-a {
@@ -106,22 +115,46 @@
 }
 
 /* style body */
-.w-screen {
-  width: 100%;
-}
-
-.min-h-screen {
-  min-height: 100%;
-}
-
 body {
-  display: block;
   margin: 0 auto;
   margin-bottom: 0;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: monospace !important;
 }
 
-.font {
-  font-family: monospace;
+#intro {
+  background: url("boat_water_italy.JPG");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.intro {
+  /* margin: 0 2rem; */
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  color: #dddddd;
+  padding: 5% 0 5% 0;
+}
+
+.arrow-down {
+  background: url("down-arrow.png");
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .txt-col {
@@ -129,7 +162,8 @@ body {
 }
 
 .bg {
-  background-color: rgb(3, 18, 62);
+  /* background-color: rgb(3, 18, 62); */
+  background-color: white;
 }
 
 /* flex */
@@ -153,7 +187,7 @@ body {
 
 .p-size {
   font-size: 30px;
-  color: rgb(58, 207, 142);
+  color: rgb(255, 255, 255);
   margin-bottom: 10px;
 }
 
@@ -193,8 +227,8 @@ body {
 }
 
 .h2-font {
-  font-size: 50px;
-  color: rgb(126, 125, 124);
+  font-size: 50px !important;
+  color: rgb(126, 125, 124) !important;
 }
 
 h3 {
@@ -218,11 +252,11 @@ h6 {
 /* Side fixed tab bar */
 #icon-bar {
   position: fixed;
-  top: 52%;
+  top: 42%;
   /* -webkit-transform: translateY(-50%); */
   /* -ms-transform: translateY(-50%); */
   transform: translateY(-50%);
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .icon-img {
@@ -360,6 +394,11 @@ h6 {
   line-height: 1.25rem;
 }
 
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .section {
   border-top: 1px solid rgb(221, 221, 221);
   border-bottom: 1px solid rgb(221, 221, 221);
@@ -369,7 +408,7 @@ h6 {
 
 .section-about {
   padding: 1rem 3rem;
-  border-bottom: 1px solid rgb(221, 221, 221);
+  border-top: 1px solid rgb(221, 221, 221);
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -487,10 +526,11 @@ h6 {
 .slide {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 90%;
   height: 35rem;
-
+  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   transition: transform 1s;
@@ -565,7 +605,6 @@ h6 {
 .gallery-box {
   width: 30%;
   position: relative;
-  padding: 5%;
 }
 
 .gallery-title {
@@ -677,10 +716,18 @@ h6 {
 }
 
 .san-fran {
+  display: block;
+  flex-basis: 100%;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 640px) {
+  .san-fran {
+    flex-basis: 50%ß;
+  }
 }
 
 .gallery {
