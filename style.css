@@ -9,9 +9,11 @@
   /* box-sizing: border-box; */
 }
 
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
+/* Website Responsive */
+
+@media (mad-width: 991px) {
+  header {
+    padding: 18px 40px;
   }
 }
 
@@ -126,7 +128,7 @@ body {
 }
 
 #intro {
-  background: url("boat_water_italy.JPG");
+  background: url("./assests/boat_water_italy.JPG");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -428,6 +430,26 @@ h6 {
 .me-dog-pic {
   height: 60px;
   width: 60px;
+}
+
+.section-projects {
+  padding: 1rem 3rem;
+  border-top: 1px solid rgb(221, 221, 221);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.section-gallery {
+  padding: 1rem 3rem;
+  border-top: 1px solid rgb(221, 221, 221);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
 }
 
 /* modal window */

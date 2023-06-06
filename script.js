@@ -108,7 +108,6 @@ const slider = function () {
   btnLeft.addEventListener("click", prevSlide);
 
   document.addEventListener("keydown", function (e) {
-    console.log(e);
     if (e.key === "ArrowLeft") prevSlide();
     e.key === "ArrowRight" && nextSlide(); // works same way due to shortcurcuiting
   });
@@ -170,3 +169,11 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(intro);
+
+// Reveal sections
+// const allSections = document.querySelectorAll(".section");
+//
+// const revealSection = function (entries, observer) {};
+//
+// const sectionObserver = new IntersectionObserver(revealSection, {});
+//
