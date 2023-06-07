@@ -1,7 +1,7 @@
-const modal = document.querySelector(".modal");
+const modal = document.querySelector(".modal-box");
 const overlay = document.querySelector(".overlay");
 const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
-const btnsCloseModal = document.querySelector(".btn--close-modal");
+const btnCloseModal = document.querySelector(".btn--close-modal");
 const nav = document.querySelector(".nav");
 
 // Open modal
@@ -9,6 +9,7 @@ const openModal = function (e) {
   e.preventDefault();
   modal.classList.remove("hidden");
   overlay.classList.remove("overlay");
+  console.log(openModal);
 };
 
 // Close modal
@@ -21,7 +22,7 @@ const closeModal = function () {
 btnsOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
 
 // Close modal
-btnsCloseModal.addEventListener("click", closeModal);
+btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
 // Close modal by clicking surrounding area
