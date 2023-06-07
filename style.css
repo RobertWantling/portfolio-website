@@ -424,14 +424,13 @@ h5 {
 }
 
 .section {
-  /* border-top: 1px solid rgb(221, 221, 221); */
   border-bottom: 1px solid rgb(221, 221, 221);
   transition: transform 1s ease 0s, opacity 1s ease 0s;
   transition: transform 1s, opacity 1s;
 }
 
 .section-about {
-  padding: 5em;
+  padding: 4em;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
@@ -443,8 +442,8 @@ h5 {
   font-size: 50px;
   font-weight: bold;
   color: rgb(126, 125, 124);
+  padding-top: 1em;
 }
-/* about */
 
 .me-dog-pic {
   height: 60px;
@@ -453,13 +452,15 @@ h5 {
 
 .section-projects {
   padding: 1rem 3rem;
-  padding-right: 10%;
-  padding-left: 10%;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
   width: 100%;
   flex-wrap: wrap;
+}
+
+.project-title {
+  padding-top: 1em;
 }
 
 .section-gallery {
@@ -912,6 +913,7 @@ button.close {
 footer {
   height: 2em;
   padding-top: 1em;
+  margin: 10px;
 }
 
 @media only screen and (min-width: 640px) {
