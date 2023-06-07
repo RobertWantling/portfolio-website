@@ -99,6 +99,10 @@
   width: 100%;
 }
 
+.active {
+  color: rgb(119, 60, 0);
+}
+
 /* Change the color of links on hover  */
 #topnav a:hover {
   /* color: rgb(85, 232, 168); */
@@ -863,18 +867,56 @@ button.close {
   transition: all 0.3s;
 }
 
+#contact {
+  text-align: center;
+  margin: 0px auto;
+  height: 350px;
+  width: 100%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
 .h1-contact {
   display: flex;
   justify-content: center;
+  color: black;
+  text-transform: uppercase;
 }
 
-.san-fran {
-  display: block;
-  flex-basis: 100%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-evenly;
+.email-icon {
+  height: 100px;
+  max-width: 100%;
+  font-size: 55px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  margin: 0 auto 10px;
+  color: black;
+}
+
+.contact .contact-box p {
+  color: black;
+  margin: 0 auto;
+  font-size: 16px;
+  max-width: 600px;
+  padding-bottom: 20px;
+}
+
+#contact .email-button {
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  /* border-radius: 30px; */
+  border: 2px solid #000;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+footer {
+  height: 2em;
+  padding-top: 1em;
 }
 
 @media only screen and (min-width: 640px) {
@@ -898,4 +940,18 @@ button.close {
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
+}
+
+.anchor {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.san-fran {
+  display: block;
+  flex-basis: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }

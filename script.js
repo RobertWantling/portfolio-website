@@ -32,7 +32,7 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-// slider function
+//////////// SLIDER FUNCTION ////////////
 // Want to put this into a function so dont pollute global namespace
 const slider = function () {
   const slides = document.querySelectorAll(".slide");
@@ -125,7 +125,7 @@ const slider = function () {
 };
 slider(); // create big function better practise
 
-// Menu fade animation
+//////////// MENU FADE ANIMATION ////////////
 const handleHover = function (e) {
   if (e.target.classList.contains("nav__link")) {
     const link = e.target; // creating a variable which contains el working with
@@ -140,47 +140,34 @@ nav.addEventListener("mouseover", handleHover.bind(0.5));
 
 nav.addEventListener("mouseout", handleHover.bind(1));
 
-// Sticky navigation - use scroll event
-// const obsCallback = function (entries, observer) {
-// entries.forEach((entry) => {
-// console.log(entries);
-// });
-// };
-//
-// const obsOptions = {
-// root: null,
-// threshold: [0, 0.2],
-// };
-// const observer = new IntersectionObserver(obsCallback, obsOptions);
-// observer.observe(about);
-
-// Sticky Nav
+//////////// STICKY NAV ////////////
 const header = document.querySelector(".intro");
 const navHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
 
 const stickyNav = function (entries) {
   const [entry] = entries; // same as entires[0]
 
-  if (!entry.isIntersecting) nav.classList.add("sticky", "txt-change");
-  else nav.classList.remove("sticky");
+  if (!entry.isIntersecting) nav.classList.add("sticky");
+  else nav.classList.remove("sticky", "active");
 };
 
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
-  rootMargin: `-${navHeight}px`,
+  rootMargin: `-${navHeight - 60}px`,
 });
 headerObserver.observe(intro);
 
-// Reveal sections
+//////////// REVEAL SECTIONS ////////////
 const allSections = document.querySelectorAll(".section");
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove("section--hidden");
+  entry.target.classList.add("active");
   observer.unobserve(entry.target);
 };
 
@@ -193,12 +180,31 @@ allSections.forEach(function (section) {
   section.classList.add("section--hidden");
 });
 
-// selected section nav link
+// reveal section highlight nav ///
 
+// nav.addEventListener("scroll", function (e) {
+// console.log(e);
+// });
+
+// const addClass = function (entries, observer) {
+// const [entry] = entries;
+// console.log(entry);
+// };
+//
+// const ob = new IntersectionObserver(addClass, {
+// root: null,
+// threshold: 0,
+// rootMargin: "50px",
+// });
+//////////// HIGHLIGHT NAV CLICK FUNCTION ////////////
 function activateNav(el) {
+  // get all 'a' el
   const selected = document.getElementsByTagName("a");
+  // loop through all 'a' el
   for (i = 0; i < selected.length; i++) {
+    // remove class 'active' if exists
     selected[i].classList.remove("active");
   }
+  // add 'active' to clicked el
   el.classList.add("active");
 }
