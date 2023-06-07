@@ -72,7 +72,8 @@
 /* Style the links inside the navigation bar */
 #topnav a {
   float: left;
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: rgb(126, 125, 124);
   text-align: center;
   text-decoration: none;
   font-size: 25px;
@@ -233,7 +234,7 @@ body {
 }
 
 .text-intro {
-  color: rgb(109, 109, 110);
+  color: #dddddd;
   font-size: 20px;
   padding-bottom: 2.5rem;
 }
@@ -423,16 +424,14 @@ h5 {
 }
 
 .section {
-  border-top: 1px solid rgb(221, 221, 221);
+  /* border-top: 1px solid rgb(221, 221, 221); */
   border-bottom: 1px solid rgb(221, 221, 221);
   transition: transform 1s ease 0s, opacity 1s ease 0s;
   transition: transform 1s, opacity 1s;
 }
 
 .section-about {
-  padding: 1rem 3rem;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 5em;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
@@ -760,7 +759,7 @@ button.close {
 
 .gallery-title {
   max-width: 80rem;
-  /* margin: 0 auto 2rem auto; */
+  margin: 0 auto 2rem auto;
   justify-content: center;
 }
 
