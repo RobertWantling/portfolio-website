@@ -21,22 +21,19 @@
       <div class="container-fluid">
       <nav class="nav">
           <div id="topnav">
-            <a class="nav__link hover-border active" href="index.html">Home</a>
-            <a class="nav__link hover-border" href="#about">About</a>
-            <a class="nav__link hover-border" href="#portfolio">Portfolio</a>
-            <a class="nav__link hover-border" href="#section--3">Gallery</a>
-            <a class="nav__link hover-border" href="#contact">Contact</a>
+            <a class="nav__link hover-border" onclick="activateNav(this)" href="index.html">Home</a>
+            <a class="nav__link hover-border" onclick="activateNav(this)" href="#about">About</a>
+            <a class="nav__link hover-border" onclick="activateNav(this)" href="#portfolio">Portfolio</a>
+            <a class="nav__link hover-border" onclick="activateNav(this)" href="#section--3">Gallery</a>
+            <a class="nav__link hover-border" onclick="activateNav(this)" href="#contact">Contact</a>
         </div>
       </nav>
 
       <!-- Container main page -->
-
       <div class="intro-content container">
-       
         <p class="font font-col p-size">Hi, my name is</p>
         <div>
           <span class="full-name style-name flex">Robert Wantling</span>
-        
         <h1 class="h1-font font-col">Junior Developer.</h1>
         <p class="font-col flex text-intro font">
           On the path to becoming a developer, with a passion for modern web
@@ -52,8 +49,9 @@
      
     </div>
     </header>
-      <!-- about section -->
-    <section id="about" class="container section-about">
+
+      <!-- ABOUT SECTION -->
+    <section id="about" class="container section-about section">
       
 
         <div class=" flex txt-col flex-wrap style-name font">
@@ -127,8 +125,8 @@
         </div>
     </section>
 
-      <!-- Projects -->
-    <section id="portfolio" class="section-projects">
+      <!-- PROJECT SECTION -->
+    <section id="portfolio" class="section-projects section">
         <h2 class="text-center font h2-font flex j-c">Projects</h2>
         <div class="project-pics flex">
           <div class="image-container">
@@ -163,8 +161,6 @@
               class="bank-img-2"
               src="./assests/todo-app.png"
               alt="Image 2"
-              
-              
             />
             <div class="overlay-1">
               <button class="btn--show-modal text-1">View</button>
@@ -187,8 +183,8 @@
     </section>
     
 
-    <!-- slider section -->
-    <section class="section-gallery" id="section--3">
+    <!-- SLIDER SECTION -->
+    <section class="section-gallery section" id="section--3">
       <div class="gallery-title flex">
         <h2 class="section--header font-serif">
           Places I've visited through my lense.
@@ -285,8 +281,8 @@
       </div>
     </section>
 
-    <!-- contact section -->
-    <section class="section" id="contact section--hidden">
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
       <div class="flex j-c">
         <h1 class="h1-contact">Get in touch</h1>
       </div>
