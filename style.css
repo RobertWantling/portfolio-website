@@ -246,9 +246,9 @@ h5 {
   margin: auto;
 }
 
-h6 {
+.hobbies {
   font-size: 20px;
-  color: black;
+  color: black !important;
   margin: auto;
 }
 /* Side fixed tab bar */
