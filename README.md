@@ -6,13 +6,9 @@
   
 - General Info
 - Technologies Used
-- Features
 - Screenshots
-- Setup
-- Usage
 - Project Status
 - Room for Improvement
-- Acknowledgements
 - Contact
   
 ## General Information
@@ -23,9 +19,9 @@
   
 ## Technologies Used
   
-- HTML - version 1.0
-- CSS - version 2.0
-- JavaScript - version 3.0
+- HTML - 5
+- CSS - CSS3
+- JavaScript - ES6
 
 ## Screenshots
   
