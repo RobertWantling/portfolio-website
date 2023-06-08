@@ -1,6 +1,6 @@
 # Portfolio-Website
 
-<p>My first project website using HTML, CSS and vanilla JavaScript. Still in the works with more features to be implemented.o <a href="[https://www.google.com](https://github.com/RobertWantling/portfolio-website#:~:text=robertwantling.github.io/portfolio%2Dwebsite/)" rel="project">here</a>.<p>
+<p>My first project website using HTML, CSS and vanilla JavaScript. Still in the works with more features to be implemented. <a href="[https://github.com/RobertWantling/portfolio-website#:~:text=robertwantling.github.io/portfolio%2Dwebsite/]" rel="project">here</a>.<p>
 
 ## Table of Contents
   
