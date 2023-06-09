@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assests/tab-logo.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -131,9 +132,11 @@
         <div class="project-pics flex">
           <div class="image-container">
             <img
-              class="bank-img-1"
-              src="./assests/e-commerce-web.png"
-              alt="Image 1"/>
+              
+              src="./assests/e-commerce-web-lazy.png"
+              data-src="./assests/e-commerce-web.png"
+              alt="e-commerce website"
+              class="bank-img-1 lazy-img"/>
             <div class="overlay-1">
               <button class="btn--show-modal text-1">View</button>
               <!-- <div class="overlay"></div> -->
@@ -141,9 +144,10 @@
           </div>
           <div class="image-container">
             <img
-              class="bank-img-1"
-              src="./assests/bankist-image-app.png"
-              alt="Image 1"
+              src="./assests/banking-app-lazy.png"
+              data-src="./assests/banking-app.png"
+              alt="banking app"
+              class="bank-img-1 lazy-img"
               
               
             />
@@ -154,9 +158,11 @@
           </div>
           <div class="image-container">
             <img
-              class="bank-img-2"
-              src="./assests/todo-app.png"
-              alt="Image 2"
+              src="./assests/todo-app-lazy.png"
+              data-src="./assests/todo-app.png"
+              alt="todo app"
+              class="bank-img-2 lazy-img"
+
             />
             <div class="overlay-1">
               <button class="btn--show-modal text-1">View</button>
@@ -165,9 +171,11 @@
           </div>
           <div class="image-container">
              <img
-               class="bank-img-1"
-               src="./assests/todo-app.png"
-               alt="Image 1"
+               src="./assests/todo-app-lazy.png"
+               data-src="./assests/todo-app.png"
+               alt="banking app"
+               class="bank-img-1 lazy-img"
+
              />
              <div class="overlay-1">
                <button class="btn--show-modal text-1">View</button>
@@ -189,8 +197,8 @@
       <div class="slider">
         <div class="slide">
           <div class="gallery-box">
-            <h5 class="gallery-header lazy-img">Venice</h5>
-            <img class="san-fran" src="./images/20191019101404_IMG_6887.JPG" alt="san-fran" />
+            <h5 class="gallery-header">Venice</h5>
+            <img class="san-fran lazy-img" src="./images/Venice-boat.JPG" data-src="./images/Venice-boat-lazy.JPG" alt="san-fran" />
             <address class="location-pic">
               <h5>Italy</h5>
               <p>2020</p>

@@ -180,22 +180,34 @@ allSections.forEach(function (section) {
   section.classList.add("section--hidden");
 });
 
-// reveal section highlight nav ///
+//////////// LAZY LOADING ////////////
+const imgTargets = document.querySelectorAll("img[data-src]");
+console.log(imgTargets);
 
-// nav.addEventListener("scroll", function (e) {
-// console.log(e);
-// });
+const loadImg = function (entries, observer) {
+  // const [entry] = entires;
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
 
-// const addClass = function (entries, observer) {
-// const [entry] = entries;
-// console.log(entry);
-// };
-//
-// const ob = new IntersectionObserver(addClass, {
-// root: null,
-// threshold: 0,
-// rootMargin: "50px",
-// });
+    // replace src with data-src
+    entry.target.src = entry.target.dataset.src;
+
+    entry.target.addEventListener("load", function () {
+      entry.target.classList.remove("lazy-img");
+    });
+    observer.unobserve(entry.target);
+  }
+};
+
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  // make load earlier
+  rootMargin: "+800px",
+});
+
+imgTargets.forEach((img) => imgObserver.observe(img));
+
 //////////// HIGHLIGHT NAV CLICK FUNCTION ////////////
 function activateNav(el) {
   // get all 'a' el
@@ -208,3 +220,42 @@ function activateNav(el) {
   // add 'active' to clicked el
   el.classList.add("active");
 }
+
+// DOM Lifecycle
+
+// function run(N, M) {
+// let result = " ";
+// for (let i = N; i <= M; i = i + 1) {
+// if (i % 15 === 0) {
+// result += " FizzzBuzz, ";
+// } else if (i % 5 === 0) {
+// result += "Buzz, ";
+// } else if (i % 3 === 0) {
+// result += "Fizz, ";
+// } else {
+// result += i + ", ";
+// }
+// }
+// console.log(result);
+// }
+//
+// run(1, 5);
+// run(1, 15);
+//
+function run(N, M) {
+  let result = " ";
+  for (let i = N; i <= M; i = i + 1) {
+    if (i % 15 === 0) {
+      result += " FizzzBuzz";
+    } else if (i % 5 === 0) {
+      result += "Buzz";
+    } else if (i % 3 === 0) {
+      result += "Fizz";
+    } else {
+      result += i + ",";
+    }
+  }
+  console.log(`${result}`.join(" , "));
+}
+
+run(1, 15);

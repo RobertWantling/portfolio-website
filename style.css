@@ -381,6 +381,7 @@ h5 {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
   cursor: pointer;
+  margin-left: 1em;
 }
 
 .overlay-2 {
@@ -954,5 +955,5 @@ footer {
 }
 
 .lazy-img {
-  filter: blur(20px);
+  filter: blur(10px);
 }
