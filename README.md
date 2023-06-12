@@ -13,8 +13,8 @@
   
 ## General Information
   
-- A personal website showcasing my recent projects that I have started and I am currently in the process of refactoring and adding new features. 
-- It is intended to demonstrate my ability as a junior software developer and highlight my strengths as well as show my weaknesses and room for improvement (always open to constructive critisism!)
+- A personal website showcasing my recent projects that I have started and where I am continuously in the process of refactoring and adding new features. 
+- It is intended to demonstrate my ability as a junior software developer and highlight my strengths as well as show my weaknesses and room for improvement (always open to constructive criticism!)
 - I hope throughout the next few months and beyond that I can keep adding and improving this site to further illustrate my coding ability.
   
 ## Technologies Used
@@ -32,19 +32,17 @@ Example screenshot
 Project is: In progress 
 
 ## Room for Improvement
-  
-Include areas I believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
 
 - Ensure the website is responsive and there are not any breaks in the code
 - Implement more projects on to the site
-- Proitise compatiability with other browsers
+- Priotise compatibility with other browsers
 - Maybe add more advanced JS components 
   
 To do:
 
-- Improve design of footer / add socail links and contact information
+- Improve the design of the footer / add social links and contact information
 - More relevant personal projects
   
   
